@@ -8,7 +8,7 @@ import Itinerary from './screens/itinerary';
 import { Container, Header, Content, Footer, FooterTab, Button, Icon, Title } from 'native-base';
 import {FlatList, ActivityIndicator, View, Text, StyleSheet} from 'react-native';
 
-export default class FeedPage extends Component
+export default class Events extends Component
 {
 //import {music1, music2, music3, night1, night2, night3, food1, food2, outdoor, amusement} from './events';
 //var event = {type:"", name:"", eventLoc:"", date:"", description:"", picUrl:""};
