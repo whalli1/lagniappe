@@ -7,28 +7,40 @@ import {FlatList, ActivityIndicator, View, Text, StyleSheet, Dimensions, ScrollV
 
 const {width, height} = Dimensions.get('window'); 
 
+
+
 export default class FeedPage extends Component {
+	
+	   state = {
+      names: [
+         {'name': 'DMX Concert', 'id': 1},
+         {'name': 'Wu-Tang Concert', 'id': 2},
+         {'name': 'Boosie Concert', 'id': 3},
+         {'name': 'Webbie Concert', 'id': 4},
+         {'name': 'Beers at the Park', 'id': 5},
+         {'name': 'Kegger at the Park', 'id': 6},
+         {'name': 'Collective Hiking', 'id': 7},
+         {'name': 'Yoga', 'id': 8},
+         {'name': 'Drunk Yoga', 'id': 9},
+         {'name': 'Tapas at the Park', 'id': 10},
+         {'name': 'Van Halen Cover Band', 'id': 11},
+         {'name': 'Jambalaya Cookoff (BYOB)', 'id': 12}
+      ]
+   }
 
   render() {
     return (
-		<ScrollView>
-			{<Text style={styles.title}> DMX Concert </Text> }
-			{<Text style={styles.title}> Dog Parade </Text> }
-			{<Text style={styles.title}> Keg Party </Text> }
-			{<Text style={styles.title}> Spanish Moon Concert </Text> }
-			{<Text style={styles.title}> Tapas at the Park </Text> }
-			{<Text style={styles.title}> Wine Night </Text> }
-			{<Text style={styles.title}> Beer Brew Off </Text> }
-			{<Text style={styles.title}> John Cage Concert </Text> }
-			{<Text style={styles.title}> Van Halen Cover Band </Text> }
-			{<Text style={styles.title}> Yoga on Tap </Text> }
-			{<Text style={styles.title}> Another Dog Parade </Text> }
-			{<Text style={styles.title}> Webbie Live </Text> }
-			{<Text style={styles.title}> The Justice League </Text> }
-			{<Text style={styles.title}> Group Hiking with Dave </Text> }
-			{<Text style={styles.title}> A party </Text> }
-		</ScrollView>
-		
+         <View>
+            <ScrollView>
+               {
+                  this.state.names.map((item, index) => (
+                     <View key = {item.id} style = {styles.item}>
+                        <Text>{item.name}</Text>
+                     </View>
+                  ))
+               }
+            </ScrollView>
+         </View>
     );
   }
 }
@@ -51,4 +63,14 @@ const styles = StyleSheet.create({
 		fontSize: 15,
 		padding: 5,
 	},
+	item: {
+	  flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      padding: 30,
+      margin: 2,
+      borderColor: '#2a4944',
+      borderWidth: 1,
+      backgroundColor: '#d2f7f1'
+	}
 });
