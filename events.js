@@ -1,6 +1,10 @@
 import { AppRegistry } from 'react-native';
 import React, { Component } from 'react';
-import { Friends } from './friends'
+import Tabs from './Tabs';
+import Feed from './screens/feed';
+import Friends from './screens/friends';
+import Profile from './screens/profile';
+import Itinerary from './screens/itinerary';
 import { Container, Header, Content, Footer, FooterTab, Button, Icon, Title } from 'native-base';
 import {FlatList, ActivityIndicator, View, Text, StyleSheet} from 'react-native';
 
