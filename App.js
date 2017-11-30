@@ -4,7 +4,7 @@ import Tabs from './Tabs';
 import Feed from './screens/feed';
 import Friends from './screens/friends';
 import Profile from './screens/profile';
-import Itenerary from './screens/itenerary';
+import Itinerary from './screens/itineraryFolder/itinerary';
 
 import {
   StyleSheet,   // CSS-like styles
@@ -26,8 +26,8 @@ export default class App extends Component {
             <Feed/>
           </View>
           {/* Third tab */}
-          <View title="Itenerary" style={styles.content}>
-            <Itenerary/>
+          <View title="Itinerary" style={styles.content}>
+            <Itinerary/>
           </View>
           <View title="Profile" style={styles.content}>
             <Profile/>
